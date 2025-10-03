@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float checkObstacleRadius = 0.4f;
     public PolygonCollider2D worldBoundary;
-
+    public float rotationSpeed = 10f;
 
     public LayerMask obstacleLayerMask;
     private Vector2 targetPosition;
@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
             // Calculate direction toward the target
             Vector2 direction = (targetPosition - rb.position).normalized;
             rb.linearVelocity = direction * moveSpeed;
+
+            if (direction.sqrMagnitude > 0.01f)
+                RotateTowards(direction);
 
             // Stop when we're close enough
             if (Vector2.Distance(rb.position, targetPosition) < 0.05f)
@@ -67,10 +70,20 @@ public class PlayerController : MonoBehaviour
         if(hit == null)
         {
             targetPosition = desiredTarget;
+
+            //RotateTowards(moveDir);
             isMoving = true;
         }
         else isMoving = false;
 
 
+    }
+
+    private void RotateTowards(Vector2 direction)
+    {
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, angle); // -90f if your sprite points up by default
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
     }
 }
