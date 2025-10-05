@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Canvas
   - Vehicle
+  - Grid
+  - SoundFX
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - 
-  - 
+  - Vehicle
+  - Glow
   - 
   - 
   - 

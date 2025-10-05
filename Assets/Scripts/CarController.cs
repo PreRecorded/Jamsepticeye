@@ -16,6 +16,11 @@ public class CarController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = Vector2.right * moveSpeed;
+
+        if(transform.position.x > 20)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
