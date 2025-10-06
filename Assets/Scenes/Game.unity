@@ -570,7 +570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &243531503
 Transform:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ Transform:
   m_GameObject: {fileID: 243531502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.48, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -635,7 +635,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.04
+  m_MaxParticleSize: 2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -746,7 +746,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -853,7 +853,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -917,7 +917,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1233,7 +1233,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -1294,7 +1294,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 5
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -2121,11 +2121,11 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2705,7 +2705,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    inWorldSpace: 0
+    inWorldSpace: 1
   InheritVelocityModule:
     enabled: 0
     m_Mode: 0
@@ -6635,7 +6635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1110629646
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6700,7 +6700,7 @@ Transform:
   m_GameObject: {fileID: 1110629644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.28, y: 1.41, z: 0}
+  m_LocalPosition: {x: -4.85, y: -1.25, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7353,7 +7353,8 @@ MonoBehaviour:
   - {fileID: 390681805}
   - {fileID: 1886589811}
   vehicleSpawnRate: 1
-  TruckKunSpawnChance: 10
+  txt_TruckKun: {fileID: 6198051358887699927, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+  TruckKunSpawnChance: 50
 --- !u!4 &1734301655
 Transform:
   m_ObjectHideFlags: 0
@@ -88261,6 +88262,110 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &8880884010897645824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.2333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.1666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258701311713118405, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198051358887699927, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_Name
+      value: txt_TruckKun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198051358887699927, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6198051358887699927, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 6060b536709cbf847bd8ed86c9a232ef, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -88279,3 +88384,4 @@ SceneRoots:
   - {fileID: 1095664500}
   - {fileID: 1361421760}
   - {fileID: 1110629647}
+  - {fileID: 8880884010897645824}
