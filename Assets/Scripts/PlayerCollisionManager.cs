@@ -24,8 +24,16 @@ public class PlayerCollisionManager : MonoBehaviour
     {
         if (collision.transform.CompareTag("Vehicle"))
         {
-            HitByVehicle();
+            if (!collision.gameObject.GetComponent<CarController>().isTruckKun)
+                HitByVehicle();
+            else
+                HitByTruckKun();
         }
+    }
+    //Win state //
+    void HitByTruckKun()
+    {
+
     }
 
 

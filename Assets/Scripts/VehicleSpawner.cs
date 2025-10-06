@@ -24,6 +24,7 @@ public class VehicleSpawner : MonoBehaviour
         {
             Debug.Log("Spawning TruckKun");
             Instantiate(txt_TruckKun, carObject.transform);
+            carObject.GetComponent<CarController>().isTruckKun = true;
             //carObject.transform.localScale = Vector3.one * 4;
         }
     }

@@ -1,16 +1,26 @@
 using UnityEngine;
-
+using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public PlayerController playerControllerScript;
+    public Animator cameraTransitionAnim;
+    private Button playButton;
+
+    private void Start()
     {
-        
+        var root = GetComponent<UIDocument>().rootVisualElement;
+
+        playButton = root.Q<Button>("PlayButton");
+        playButton.clicked += PlayGame;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void PlayGame()
     {
-        
+        cameraTransitionAnim.SetTrigger("TransitionCamera");
+        Destroy(cameraTransitionAnim.gameObject, 2f);
+        playerControllerScript.enabled = true;
+        gameObject.SetActive(false);
     }
 }

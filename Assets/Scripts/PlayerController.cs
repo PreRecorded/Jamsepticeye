@@ -12,13 +12,13 @@ public class PlayerController : MonoBehaviour
     public LayerMask obstacleLayerMask;
     private Vector2 targetPosition;
     private bool isMoving = false;
-
     private Animator anim;
 
     private Rigidbody2D rb;
 
     void Start()
     {
+  
         anim = GetComponent<Animator>();
         targetPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
         if (isMoving)
         {
             // Calculate direction toward the target
@@ -56,6 +55,7 @@ public class PlayerController : MonoBehaviour
     // 👇 This gets called once whenever a Move input is performed
     public void OnMove(InputAction.CallbackContext context)
     {
+       // Debug.Log("Trying to move");
         if (!context.performed) return;        // Only run on key press
         if (isMoving) return;                  // Prevent stacking moves
 

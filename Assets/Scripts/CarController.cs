@@ -3,7 +3,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
-
+    [HideInInspector] public bool isTruckKun = false;
 
     Rigidbody2D rb;
 
